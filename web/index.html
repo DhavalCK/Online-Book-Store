@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/signup_style.css">
+    </head>
+    <body class="home_page" style="background:url('images/banner.jpg'); background-size: cover;">
+
+        <header style="height: 20vh;">
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-2 col-md-3 col-sm-3 col">
+                            <div class="full">
+                                <div>
+                                    <div class="logo"> <h1><a href="index.html">Online Book Store</a></h1> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-11 col-lg-9 col-md-9 col-sm-9">
+                            <div>
+                                <div>
+                                    <nav class="main-menu">
+                                        <ul class="menu-area-main">
+                                            <li class="active"> <a href="index.html">Home</a> </li>
+                                            <li><a href="sign_up.html">Sign Up</a></li>
+                                            <li><a href="about.jsp">About us</a> </li>
+                                            <li><a href="contactus.jsp">Contact us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="container" style="height:470px;">
+            <div class="login_f col m-auto w-75" style="background-color:aliceblue">
+                <form action="LoginServlet" method="post" id="fileForm" role="form" class="m-auto w-75">
+                    <h2 class="title text-center fs-30 mb-10">Login</h2>
+                    <div class="form-group">
+                        <label for="email"><span class="req">* </span> Email : </label> 
+                        <input class="form-control border-primary" required type="text" name="email" id = "email"  onchange="email_validate(this.value);" placeholder="Email"/>   
+                        <div class="status" id="status"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password"><span class="req">* </span> Password: </label>
+                        <input required name="password" type="password" class="form-control border-primary inputpass" placeholder="Password" id="pass1" /> 
+                    </div>
+
+                    <div class="form-group">
+                        <div class="d-inline mr-5">
+                            <input class="btn btn-success px-4 py-2" type="submit" name="submit_login" value="Submit">
+                        </div>
+                        <div class="d-inline mr-5">
+                            <input class="btn btn-danger px-4 py-2" type="reset" name="reset_login" value="Reset">
+
+                        </div>
+                    </div>
+                </form>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Don't have an account ?&nbsp;<a href="sign_up.html" class="text-primary"> Sign Up</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="text-danger">Forgot your password?</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div style="height: 3vh;"></div>
+        <footer>
+            <div class="footer copyright">
+                <div class="container text-center">
+                    <h3>Copyright All Right Reserved</h3>                
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

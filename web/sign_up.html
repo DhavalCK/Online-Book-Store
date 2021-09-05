@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sign up</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/signup_style.css">
+    </head>
+    <body class="main-layout home_page" style="background:url('images/banner.jpg'); background-size: cover">
+        <header>
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-2 col-md-3 col-sm-3 col logo_section">
+                            <div class="full">
+                                <div class="center-desk">
+                                    <div class="logo"> <h1><a href="index.html">Online Book Store</a></h1> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-11 col-lg-9 col-md-9 col-sm-9">
+                            <div class="menu-area">
+                                <div class="limit-box">
+                                    <nav class="main-menu">
+                                        <ul class="menu-area-main">
+                                            <li> <a href="index.html">Home</a> </li>
+                                            <li class="active"><a href="sign_up.html">Sign Up</a></li>
+                                            <li><a href="about.jsp">About us</a> </li>
+                                            <li><a href="contactus.jsp">Contact us</a></li>
+                                                                            </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div id="header"></div>
+        <div style="height: 20vh;"></div>
+        <div class="container r1">
+        <div class="reg_f col m-auto w-75">
+            <form action="SignupServlet" method="post" id="fileForm" role="form" class="m-auto w-75">
+                <legend class="title text-center fs-30 mb-10">Sign Up</legend>
+                <div class="form-group">
+                    <label for="fname"><span class="req">* </span> First Name: </label>
+                    <input class="form-control border-primary" type="text" name="fname" id="txt" onkeyup="Validate(this)" placeholder="First Name" required />
+                    
+                </div>
+                <div class="form-group">
+                    <label for="lname"><span class="req">* </span> Last Name: </label>
+                    <input class="form-control border-primary" type="text" name="lname" id="txt" onkeyup="Validate(this)" placeholder="Last Name" required />
+
+                </div>
+
+                <div class="form-group">
+                    <label for="phonenumber"><span class="req">* </span> Contact: </label>
+                    <input required type="text" name="contact" id="phone" class="form-control border-primary phone" maxlength="10" onkeyup="validatephone(this);" placeholder="Enter Phone Number" />
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><span class="req">* </span> Email Address: <small>This will be your login user id</small></label>
+                    <input class="form-control border-primary" required type="text" name="email" id="email" onchange="email_validate(this.value);" placeholder="Email" />
+                    <div class="status" id="status"></div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="password"><span class="req">* </span> Password: </label>
+                    <input required name="password" type="password" class="form-control border-primary inputpass" placeholder="Password" minlength="4" maxlength="16" id="pass1" /> </p>
+                    <div class="pstatus" id="pstatus"></div>
+                    <label for="password"><span class="req">* </span> Password Confirm: </label>
+                    <input required name="password" type="password" class="form-control border-primary inputpass" minlength="4" maxlength="16" placeholder="Enter again to validate" id="pass2" onkeyup="checkPass(); return false;" />
+                    <span id="confirmMessage" class="confirmMessage"></span>
+                </div>
+
+                
+                <div class="form-group">
+                    <div class="d-inline mr-5">
+                        <input class="btn btn-success px-4 py-2" type="submit" name="submit_reg" value="Submit">
+                    </div>
+                    <div class="d-inline mr-5">
+                        <input class="btn btn-danger px-4 py-2" type="reset" name="reset_reg" value="Reset">
+
+                    </div>
+                </div>
+            </form><!-- ends register form -->
+        </div>
+    </div>
+
+        <div style="height: 3vh"></div>
+        <footer>
+            <div class="footer copyright">
+                <div class="container text-center">
+                        <h3>Copyright All Right Reserved</h3>
+                    
+                </div>
+            </div>
+        </footer>
+        <script src="js/signup_js.js"></script>
+    </body>
+</html>
